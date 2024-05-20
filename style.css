@@ -1,0 +1,275 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header styles */
+#header ,#f-img{
+  width: 100%;
+  height: 28%; /* Set height to auto to adjust according to image dimensions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* Add padding to ensure image is not too close to edges */
+}
+
+#header img ,#f-img img{
+  width: 80%; /* Set width to 100% to occupy full width */
+  height: auto; /* Set height to auto to maintain aspect ratio */
+  object-fit: contain; /* Use contain instead of fill to maintain aspect ratio */
+  max-width: 260px /* Set a maximum width to prevent image from becoming too large */
+  
+}
+
+
+
+
+
+/* Media query for larger screens */
+@media (max-width: 767px) {
+  #header {
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+  
+}
+
+/* Rest of the CSS remains the same */
+#mid{
+  position: fixed;
+  top:100px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box {
+  border: 0px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 24px; /* Reduced font size for better readability on mobile devices */
+  text-align: center;
+  flex: 0 0 calc(100%); /* 50% width for 2 boxes in a line on mobile devices */
+}
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+@media (min-width: 768px) {
+  .box {
+    flex: 0 0 calc(25%); /* 25% width for 4 boxes in a line on computer */
+  }
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #f1f1f1;
+  transition: left 0.5s ease-in-out;
+  overflow-y: auto;
+  z-index: 3;
+}
+
+.panel-content {
+  padding: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size:30px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .panel{
+    width: 100%;
+  }
+}
+.footer{
+  background-color: #F0F0F0;
+  
+}
+
+.footer1 {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer1 p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.address-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.address-div img {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+  scale:0.8;
+}
+
+@media (max-width: 500px) {
+  .footer1 {
+    padding: 10px;
+  }
+
+  .footer1 p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer1 p span {
+    display: block;
+  }
+}
+
+.footer2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer2-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer2-contact {
+  text-align: left;
+  margin: 10px;
+  flex-basis: 100%;
+}
+
+.footer2-contact p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.footer2-contact p::before {
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.footer2-contact i {
+  vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+  .footer2-contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer2-contact {
+    margin: 10px 0;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .footer2-contact p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .footer2-contact p::before {
+    font-size: 20px;
+  }
+}
+.footer3 {
+  padding: 20px;
+  text-align: center; /* center align */
+  transition: background-color 0.3s ease; /* add transition effect */
+}
+
+.footer3:hover {
+  background-color: #f7f7f7; /* light gray background on hover */
+}
+
+.footer3 h3 {
+  margin-top: 0;
+  font-style: JosefinSans;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-weight: 300;
+  transition: transform 0.3s ease; /* add transition effect */
+}
+
+.footer3 h3:hover {
+  transform: translateY(-2px); /* move up on hover */
+}
+
+.footer3 ul {
+  margin-top: 3%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* center align */
+}
+
+.footer3 li {
+  display: block;
+  line-height: 2.4;
+  font-size: 1em;
+  transition: transform 0.3s ease; /* add transition effect */
+}
+
+.footer3 li:hover {
+  transform: scale(1.05); /* scale up on hover */
+}
+
+.alink {
+  text-decoration: underline;
+  color: #00698f; /* blue color */
+  transition: color 0.3s ease; /* add transition effect */
+}
+
+.alink:visited {
+  color: #660066; /* purple color */
+}
+
+.alink:hover {
+  color: #0099cc; /* light blue color */
+  text-decoration: none; /* remove underline on hover */
+  border-bottom: 2px solid #0099cc; /* add bottom border on hover */
+}
+
+/* for mobile devices (769px and below) */
+@media only screen and (max-width: 769px) {
+ .footer3 {
+    padding: 10px;
+  }
+}
+hr {
+  color: #0F0F0F;
+  width: 100%;
+  height: 1px;
+}
